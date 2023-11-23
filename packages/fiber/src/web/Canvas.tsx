@@ -140,6 +140,8 @@ const CanvasImpl = /*#__PURE__*/ React.forwardRef<HTMLCanvasElement, Props>(func
   return (
     <div
       ref={divRef}
+      className="three-canvas-wrapper"
+      {/*
       style={{
         position: 'relative',
         width: '100%',
@@ -148,9 +150,10 @@ const CanvasImpl = /*#__PURE__*/ React.forwardRef<HTMLCanvasElement, Props>(func
         pointerEvents,
         ...style,
       }}
+      */}
       {...props}>
-      <div ref={containerRef} style={{ width: '100%', height: '100%' }}>
-        <canvas ref={canvasRef} style={{ display: 'block' }}>
+      <div ref={containerRef} className="three-canvas-container" {/*style={{ width: '100%', height: '100%' }} */}>
+        <canvas ref={canvasRef} className="three-canvas-canvas" {/* style={{ display: 'block' }} */}>
           {fallback}
         </canvas>
       </div>
